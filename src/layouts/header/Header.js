@@ -189,11 +189,12 @@ export default function Header() {
                       <Bell iconClass='w-[25px]' />
                       Thông báo
                     </li>
-                    <li className="text-16 font-bold hover:text-3rd-text duration-500 flex gap-[5px] items-center">
-                      <History iconClass='w-[25px]' />
-                      Lịch sử mua hàng</li>
+                    {/*Tạm thời khóa chức năng này lại, chưa fix kịp*/}
+                    {/*<li className="text-16 font-bold hover:text-3rd-text duration-500 flex gap-[5px] items-center">*/}
+                    {/*  <History iconClass='w-[25px]' />*/}
+                    {/*  Lịch sử mua hàng</li>*/}
                     {valueUser.role == 'admin' ?
-                      <li className="text-16 font-bold hover:text-3rd-text duration-500 flex gap-[5px] items-center" onClick={() => router.push('/admin')}>
+                      <li className="text-16 font-bold hover:text-3rd-text duration-500 flex gap-[5px] items-center" onClick={() => router.push('/admin/managementProducts')}>
                         <Dashboard iconClass='w-[25px]' />
                         Quản lí</li>
                       : ''}

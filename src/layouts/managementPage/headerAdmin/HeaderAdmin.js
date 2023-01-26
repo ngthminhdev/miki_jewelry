@@ -1,7 +1,21 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import { SearchIcon, CaretDown } from 'src/components/Icons/index.js'
 import Link from 'next/link'
+import {useRecoilValue} from "recoil";
+import {dataUser} from "../../../recoils/dataUser";
+import Loading from "../../../components/Loading";
+
 export default function HeaderAdmin() {
+    const [loading, setLoading] = useState(true);
+    const user = useRecoilValue(dataUser);
+    useEffect(() => {
+        setLoading(false)
+    }, [])
+    if (loading) {
+        return <Loading/>
+    };
+
+    // const url = 'https://www.w3schools.com/howto/img_avatar.png'
     return (
         <div className="h-[113px] top-[20px] fixed w-full max-w-[1235px] z-10
          bg-white flex items-center rounded-8 justify-between shadow-md mx-[20px]
@@ -15,11 +29,15 @@ export default function HeaderAdmin() {
             </div>
             <div className="flex items-center">
                 <div className='max-w-[50px] '>
-                    <img src="https://www.w3schools.com/howto/img_avatar.png" alt='' className='w-full rounded-full' />
+                    <img
+                        width="120px"
+                        height="120px"
+                        src={user?.avatar}
+                        className='w-full rounded-full' />
                 </div>
                 <div className='flex items-center  mr-[30px]'>
                     <Link href=''>
-                        <p className='ml-[20px] mr-[10px] cursor-pointer'>The Shyn</p>
+                        <p className='ml-[20px] mr-[10px] cursor-pointer'>{user?.userName || 'Default Admin'}</p>
                     </Link>
                     <CaretDown classNameIcon="cursor-pointer hover:scale-90 duration-300" />
                 </div>

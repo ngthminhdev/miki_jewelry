@@ -66,7 +66,6 @@ const uploadHandler = async (req, res) => {
           }
           for (const element of subImage) {
             const _id = new mongoose.Types.ObjectId();
-            console.log(imageArray);
 
             const options = {
               upload_preset: 'products',

@@ -14,7 +14,6 @@ export default function managementProducts() {
   const router = useRouter()
   const setProductState = useSetRecoilState(inforProduct)
   const { product: products } = useProducts(`all?page=${query.page}&limit=5`)
-  console.log(products)
   const [newProduct, setNewProduct] = useState([])
   const handleChange = (e) => {
     const { name, checked } = e.target

@@ -57,16 +57,17 @@ function Button({
   }
 
   //Style Btn
+  let classes = ''
   if (primary) {
-    var classes = 'text-white py-2 px-[46px] bg-btn border-[1px] border-transparent';
+    classes = 'text-white py-2 px-[46px] bg-btn border-[1px] border-transparent';
   } else if (secondary) {
-    var classes = 'text-primary-text border-[1px] border-white py-2 px-[46px] bg-white border-[1px] border-transparent';
+    classes = 'text-primary-text border-[1px] border-white py-2 px-[46px] bg-white border-[1px] border-transparent';
   } else if (text) {
-    var classes = 'px-0 py-0 inline-flex text-3rd-text border-[1px] border-transparent';
+    classes = 'px-0 py-0 inline-flex text-3rd-text border-[1px] border-transparent';
   } else if (outline) {
-    var classes = 'border-[1px] rounded-[9999px] border-border-1 flex w-full px-[32px] py-[8px]';
+    classes = 'border-[1px] rounded-[9999px] border-border-1 flex w-full px-[32px] py-[8px]';
   } else if (disabled) {
-    var classes = 'text-white py-2 px-[46px] bg-[#aaa] border-[1px] border-transparent';
+    classes = 'text-white py-2 px-[46px] bg-[#aaa] border-[1px] border-transparent';
   }
   return (
     <Component

@@ -10,7 +10,7 @@ export default function AllOrder() {
     const [active, setActive] = useState(true)
     const navRef = useRef(null)
     const [dataOrder, setDataOrder] = useState([])
-    const [totalPage, setTotalPage] = useState()
+    const [totalPage, setTotalPage] = useState(0)
     const [isEdit, setIsEdit] = useState(false)
     const onBlur = (e) => {
         // if (active && !navRef.current.contains(e.target)) {
@@ -71,7 +71,7 @@ export default function AllOrder() {
         })
             .then(res => {
                 setDataOrder(res.data.carts)
-                setTotalPage(res.data.totalPages)
+                setTotalPage(Math.ceil(res.data.totalPages))
             })
             .catch(err => console.error(err))
     }, [totalPage, query.page, isEdit])

@@ -10,7 +10,6 @@ export default function Admin() {
           <Link href="/">
             <Home />
           </Link>
-
         </li>
       </ul>
     </OverLay>

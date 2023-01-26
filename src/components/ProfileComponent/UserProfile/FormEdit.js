@@ -10,7 +10,6 @@ import axiosAuth from 'src/utils/axios';
 import Loading from 'src/components/Loading';
 export default function FormEdit({ avatar }) {
     const [inforUser, setInforUser] = useRecoilState(dataUser)
-    console.log(inforUser)
     const [loading, setLoading] = useState(true)
     const genderRadio = ['Khác', 'Nam', 'Nữ']
     const schema = yup.object().shape({

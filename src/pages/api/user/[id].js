@@ -16,7 +16,6 @@ const userHandler = async (req, res) => {
   await dbConnect();
   const { method } = req;
   const { id } = req.query;
-  console.log(id)
   switch (method) {
     case "GET":
       try {

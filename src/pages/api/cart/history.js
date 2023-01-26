@@ -34,8 +34,7 @@ const cartHistoryHandler = async (req, res) => {
             },
           },
         ]);
-
-        const totalItems = await items[0].count;
+        const totalItems = await items[0]?.count || 0;
         const totalPages = Math.ceil(totalItems / +limit);
 
         const carts = await Cart.find(matcher, {
@@ -66,4 +65,4 @@ const cartHistoryHandler = async (req, res) => {
   }
 };
 
-export default withAuth(withCartOwner(cartHistoryHandler));
+export default withAuth(cartHistoryHandler);

@@ -6,29 +6,29 @@ import { CaretDown } from 'src/components/Icons';
 import { dataUser } from 'src/recoils/dataUser';
 import axiosAuth from 'src/utils/axios';
 import FormatPrice from 'src/utils/formatPrice';
+import Loading from "../../Loading";
 export default function PurchaseHistory() {
     const user = useRecoilValue(dataUser)
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
-    const [limitProduct, setLimitProduct] = useState(1)
+    const [limitProduct, setLimitProduct] = useState(5)
     const [lengthProducts, setLengthProducts] = useState()
     const [hidden, setHidden] = useState(true)
     useEffect(() => {
         setLoading(false)
     }, [])
     useEffect(() => {
-        const data = axiosAuth({
+        axiosAuth({
             method: 'GET',
             url: `/api/cart/history?limit=${limitProduct}&id=${user.id}`,
         })
             .then(res => {
                 setData(res.data.carts)
                 setLengthProducts(res.data.totalItems)
-                console.log(res)
             })
             .catch(err => console.error(err))
     }, [limitProduct])
-    if (loading) return <h1>Loading....</h1>
+    if (loading) return <Loading/>
     return (
         <div className="flex flex-col px-[30px]">
             <h1 className="text-[20px] font-bold">Lịch sử</h1>
@@ -93,7 +93,7 @@ export default function PurchaseHistory() {
                         <CaretDown />
                     </p>
                 :
-                'Chua co san phamr'
+                <div className='flex justify-center mt-12'>Bạn chưa có đơn hàng nào trước đây</div>
             }
             {
             }

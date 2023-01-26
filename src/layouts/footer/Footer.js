@@ -54,8 +54,8 @@ export default function Footer() {
               <li>Số GCNĐKDN: 2500150335</li>
               <li>Cấp lần đầu: Ngày 26/03/2007</li>
               <li>Đăng ký thay đổi lần thứ 16: Ngày 07/05/2018</li>
-              <li>Cơ quan cấp: Sở kế hoạch và đầu tư tỉnh Vĩnh Phúc</li>
-              <li>Địa chỉ: Phường Phúc Thắng, Thành phố Phúc Yên, Tỉnh Vĩnh Phúc, Việt Nam</li>
+              <li>Cơ quan cấp: Sở kế hoạch và đầu tư tỉnh Bình Phước</li>
+              <li>Địa chỉ: Thị Xã Phước Long, Tỉnh Bình Phước, Việt Nam</li>
             </ul>
           </div>
           {/* Responsive Info */}

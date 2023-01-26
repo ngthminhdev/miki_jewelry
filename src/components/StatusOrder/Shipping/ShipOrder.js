@@ -73,7 +73,6 @@ export default function ShipOrder() {
                             dataOrder.map((item, index) => (
                                 item.status === 'SHIPPING' ?
                                     <tr key={item._id}>
-                                        {console.log(item)}
                                         <td className='py-[20px] px-[30px] text-center'><input type='checkbox' /></td>
                                         <td className='py-[20px] px-[30px] text-center'>{item._id}</td>
                                         <td className='py-[20px] px-[30px] text-center'>{formatTime(item.createdAt)}</td>

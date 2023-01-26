@@ -20,12 +20,13 @@ export default function LeftSide() {
                 </Link>
             </div>
             <div className='mt-[60px] mx-[40px] '>
-                <div className='mb-[25px] hover:translate-x-[10px] duration-500'>
-                    <Link href="/admin">
-                        <a className='text-[18px] text-[#625f6e] block p-[15px] ml-[20px]'>Dashboard</a>
-                    </Link>
+                {/*Tạm thời khóa dashboard lại, fix sau*/}
+                {/*<div className='mb-[25px] hover:translate-x-[10px] duration-500'>*/}
+                {/*    <Link href="/admin">*/}
+                {/*        <a className='text-[18px] text-[#625f6e] block p-[15px] ml-[20px]'>Dashboard</a>*/}
+                {/*    </Link>*/}
 
-                </div>
+                {/*</div>*/}
                 <div className='mb-[25px] hover:translate-x-[10px] duration-500'>
                     <Link href="/admin/managementProducts">
                         <a className='text-[18px] text-[#625f6e] block p-[15px] ml-[20px]'>Quản lý sản phẩm</a>

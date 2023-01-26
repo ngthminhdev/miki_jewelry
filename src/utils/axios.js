@@ -7,7 +7,6 @@ import useLocalStorage from 'src/hooks/useLocalStorage'
 
 const user = useLocalStorage('recoil-persist', 'userState')
 const accessToken = user?.accessToken
-console.log(user)
 const axiosAuth = axios.create({
     withCredentials: true,
     baseUrl: 'http://localhost:3000',
@@ -43,7 +42,6 @@ axiosAuth.interceptors.request.use(
                 }
             }))
             const userInfors = useLocalStorage('recoil-persist', 'userState')
-            console.log(userInfors)
             config.headers.Authorization = `Bearer ${newAccessToken}`
         }
         return config;

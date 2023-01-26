@@ -7,7 +7,6 @@ async function handler(req, res) {
   switch (method) {
     case 'POST':
       const { email, password, username, birthday } = req.body;
-      console.log(email, password, username, birthday);
       try {
         await dbConnect();
         const currentUser = await User.findOne({ email }).lean();

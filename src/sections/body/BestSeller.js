@@ -4,6 +4,9 @@ import Image from 'next/image';
 // Import component, function, asset
 import Button from 'src/components/Button';
 import productImg from 'public/static/Home/Img 01.jpg';
+import productImg2 from 'public/static/Home/Img 02.png';
+import productImg3 from 'public/static/Home/Img 03.png';
+import productImg4 from 'public/static/Home/Img 04.png';
 
 export default function BestSeller() {
   // Set width window when resize
@@ -47,11 +50,11 @@ export default function BestSeller() {
           <Button primary className="w-full mt-6 hover-btn-primary peer mobile:px-[17.5px] mobile:text-[12px] mobile:leading-[20px]">
             Thêm vào giỏ hàng
           </Button>
-          <p className="text-price-text mt-[6px]">355.000đ</p>
-          <p className="text-[20px] mt-6 mobile:text-[16px] mobile:font-bold mobile:leading-6">Lira Earrings</p>
+          <p className="text-price-text mt-[6px]">599.000đ</p>
+          <p className="text-[20px] mt-6 mobile:text-[16px] mobile:font-bold mobile:leading-6">Bông Tai Hạt Cườm</p>
           <div className='hover:shadow-product hover:scale-[1.01] rounded-16 peer-hover:shadow-product'>
             <Image
-              src={productImg}
+              src={productImg4}
               alt="Best seller product"
               placeholder="empty"
               width="254"
@@ -65,11 +68,11 @@ export default function BestSeller() {
           <Button primary className="w-full mt-6 hover-btn-primary peer mobile:px-[17.5px] mobile:text-[12px] mobile:leading-[20px]">
             Thêm vào giỏ hàng
           </Button>
-          <p className="text-price-text mt-[6px]">355.000đ</p>
-          <p className="text-[20px] mt-6 mobile:text-[16px] mobile:font-bold mobile:leading-6">Lira Earrings</p>
+          <p className="text-price-text mt-[6px]">1.250.000đ</p>
+          <p className="text-[20px] mt-6 mobile:text-[16px] mobile:font-bold mobile:leading-6">Nhẫn Vàng 18k Đính Đá</p>
           <div className='hover:shadow-product hover:scale-[1.01] rounded-16 peer-hover:shadow-product'>
             <Image
-              src={productImg}
+              src={productImg2}
               alt="Best seller product"
               placeholder="empty"
               width="254"
@@ -83,11 +86,11 @@ export default function BestSeller() {
           <Button primary className="w-full mt-6 hover-btn-primary peer mobile:px-[17.5px] mobile:text-[12px] mobile:leading-[20px]">
             Thêm vào giỏ hàng
           </Button>
-          <p className="text-price-text mt-[6px]">355.000đ</p>
-          <p className="text-[20px] mt-6 mobile:text-[16px] mobile:font-bold mobile:leading-6">Lira Earrings</p>
+          <p className="text-price-text mt-[6px]">995.000đ</p>
+          <p className="text-[20px] mt-6 mobile:text-[16px] mobile:font-bold mobile:leading-6">Bông Tai Ngọc Trai</p>
           <div className='hover:shadow-product hover:scale-[1.01] rounded-16 peer-hover:shadow-product'>
             <Image
-              src={productImg}
+              src={productImg3}
               alt="Best seller product"
               placeholder="empty"
               width="254"

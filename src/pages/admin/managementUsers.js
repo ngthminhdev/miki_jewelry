@@ -58,7 +58,6 @@ export default function managementUser() {
                                             <td>
                                                 <input type='checkbox' checked={checkAll ? checkAll : null} />
                                             </td>
-                                            {console.log(item)}
                                             <td className='py-[20px] px-[30px]'>
                                                 <div className='flex items-center ml-[25%] gap-[20px] justify-start'>
                                                     <div>

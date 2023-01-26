@@ -3,6 +3,9 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    maxWidth: {
+      '3/4': '75%'
+    },
     extend: {
       screens: {
         'mobile': { 'max': '480px' },
@@ -28,6 +31,7 @@ module.exports = {
         8: '8px',
         16: '16px',
         24: '24px',
+        128: '32rem',
       },
       borderRadius: {
         8: '8px',
@@ -47,6 +51,10 @@ module.exports = {
         'shadow-gray': '0 0 5px 3px rgba(0,0,0,0.2)'
       },
       keyframes: {
+        popup: {
+          '0%': {  transform: 'scale(0))', opacity: 0 },
+          '100%': {  transform: 'scale(1))', opacity: 1 },
+        },
         loading: {
           '0%': { transform: 'rotate(0deg))', boxShadow: "1px 5px 2px #e65c00" },
           '50%': { transform: 'rotate(180deg)', boxShadow: "1px 5px 2px #18b201" },
@@ -71,6 +79,7 @@ module.exports = {
         },
       },
       animation: {
+        popup: 'popup 0.5s ease-in forwards',
         loading: 'loading 2s linear infinite',
         text: 'text 3s ease-in-out infinite',
         // For Toast
