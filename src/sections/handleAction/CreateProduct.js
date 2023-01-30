@@ -8,6 +8,7 @@ import Button from 'src/components/Button';
 import { FormProviderBox, SlectOption, TextArea, TextField } from 'src/components/hook-form';
 import convertToBase64 from 'src/sections/handleAction/functionHandle/convertImg.js';
 import * as yup from 'yup';
+import axiosAuth from "../../utils/axios";
 
 export default function createProduct() {
   const schema = yup.object().shape({
@@ -70,7 +71,7 @@ export default function createProduct() {
       setErrAdd('');
     }
     if (data) {
-      const dataAdd = axios({
+      const dataAdd = axiosAuth({
         method: 'POST',
         url: '/api/products/create',
         data: {

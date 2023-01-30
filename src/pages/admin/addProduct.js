@@ -7,7 +7,7 @@ export default function addProduct() {
   return (
     <OverLay>
       <Head>
-        <title>Add Product | Miki`}</title>
+        <title>Add Product | Miki</title>
       </Head>
       <div className="w-[510px] bg-bgr-auth rounded-r-16 mx-auto">
         <div className="flex items-center flex-col mt-14 justify-center">

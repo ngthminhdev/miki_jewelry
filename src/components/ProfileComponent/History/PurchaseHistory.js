@@ -81,7 +81,7 @@ export default function PurchaseHistory() {
                         setLimitProduct(lengthProducts)
                         setHidden(false)
                     }}
-                        className='flex gap-[10px] items-center justify-end mt-[20px] cursor-pointer font-bold'>{`Còn ${lengthProducts - limitProduct} sản phẩm (Xem thêm)`}
+                        className='flex gap-[10px] items-center justify-end mt-[20px] cursor-pointer font-bold'>{`Còn  ${lengthProducts - limitProduct > 0 ? lengthProducts - limitProduct : 0} sản phẩm (Xem thêm)`}
                         <CaretDown />
                     </p>
                     :

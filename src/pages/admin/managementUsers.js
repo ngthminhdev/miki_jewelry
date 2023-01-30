@@ -10,6 +10,7 @@ import Loading from 'src/components/Loading';
 import axiosAuth from 'src/utils/axios';
 import useUsers from 'src/hooks/useUsers';
 import { dataUser } from 'src/recoils/dataUser';
+import Head from "next/head";
 export default function managementUser() {
     const router = useRouter()
     const valueUser = useRecoilValue(dataUser)
@@ -26,6 +27,9 @@ export default function managementUser() {
         <>
             {!loading ?
                 <OverLay>
+                    <Head>
+                        <title>Quản lý người dùng | Miki</title>
+                    </Head>
                     <div className='mt-[30px]'>
                         <div className="flex shadow-md justify-between h-[80px] items-center bg-white mx-[20px] rounded-8 px-[30px]">
                             <h3 className='text-[20px] font-bold'>  Quản lí sản phẩm</h3>

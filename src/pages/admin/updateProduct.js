@@ -1,9 +1,14 @@
 import { LogoIcon } from 'src/components/icons';
 import UpdateProduct from 'src/sections/handleAction/updateProduct.js';
 import OverLay from 'src/layouts/managementPage/overlay/OverLay';
+import Head from "next/head";
+import React from "react";
 export default function updateProduct() {
     return (
         <OverLay>
+            <Head>
+                <title>Update Product | Miki</title>
+            </Head>
             <div className="w-[510px] bg-bgr-auth rounded-r-16 mx-auto">
                 <div className="flex items-center flex-col mt-14 justify-center">
                     <LogoIcon />

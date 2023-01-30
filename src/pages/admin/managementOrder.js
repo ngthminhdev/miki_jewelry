@@ -1,16 +1,20 @@
-import { useState } from 'react'
+import React, { useState } from 'react'
 import Button from 'src/components/Button'
 import AllOrder from 'src/components/StatusOrder/All/AllOrder'
 import CompleteShip from 'src/components/StatusOrder/Done/CompleteShip'
 import ProcessOrder from 'src/components/StatusOrder/Processing/ProcessOrder'
 import ShipOrder from 'src/components/StatusOrder/Shipping/ShipOrder'
 import OverLay from 'src/layouts/managementPage/overlay/OverLay'
+import Head from "next/head";
 
 export default function managementOrder() {
     const [check, setCheck] = useState(1)
 
     return (
         <OverLay>
+            <Head>
+                <title>Quản lý đơn hàng | Miki</title>
+            </Head>
             <div className='mt-[30px]'>
                 <div className="flex shadow-md justify-between h-[80px] items-center bg-white mx-[20px] rounded-8 px-[30px]">
                     <h3 className='text-[20px] font-bold'>  Quản lí đơn hàng</h3>

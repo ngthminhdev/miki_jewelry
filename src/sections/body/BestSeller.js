@@ -23,7 +23,9 @@ export default function BestSeller() {
     <div className={`${windowWidth <= 480 ? "" : "container"}`}>
       <div className="flex justify-between mobile:mt-[72px]" >
         <h1 className="text-32 font-bold relative z-10 mobile:font-mon mobile:text-semibold mobile:text-[24px] mobile:leading-8">Sản phẩm nổi bật</h1>
-        <Button primary className="py-2 px-[46px] hover-btn-primary relative z-10 mobile:hidden">
+        <Button primary className="py-2 px-[46px] hover-btn-primary relative z-10 mobile:hidden"
+          to='//product/allProductproduct/allProduct'
+        >
           Xem Tất cả
         </Button>
       </div>

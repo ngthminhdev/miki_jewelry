@@ -3,12 +3,13 @@ import Button from 'src/components/Button';
 import OverLay from 'src/layouts/managementPage/overlay/OverLay.js';
 import deleteProduct from 'src/sections/handleAction/functionHandle/deleteProduct.js'
 import { useProducts } from 'src/hooks'
-import { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { useSetRecoilState } from 'recoil'
 import { inforProduct } from 'src/recoils/inforProduct.js'
 import Loading from 'src/components/Loading';
 import Pagination from 'src/components/Pagination/Pagination'
+import Head from "next/head";
 export default function managementProducts() {
   const { query } = useRouter()
   const router = useRouter()
@@ -36,6 +37,9 @@ export default function managementProducts() {
         <Loading />
         :
         <OverLay>
+          <Head>
+            <title>Quản lý sản phẩm | Miki</title>
+          </Head>
           <div className='mt-[30px]'>
             <div className="flex shadow-md justify-between h-[80px] items-center bg-white mx-[20px] rounded-8 px-[30px]">
               <h3 className='text-[20px] font-bold'>Quản lí sản phẩm</h3>
