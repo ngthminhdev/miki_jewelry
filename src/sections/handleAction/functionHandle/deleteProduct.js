@@ -2,7 +2,7 @@ import axiosAuth from 'src/utils/axios';
 function deleteProduct(idProduct) {
     axiosAuth({
         method: 'DELETE',
-        url: `/api/products/${idProduct}`
+        url: `/api/products/delete/${idProduct}`
     })
         .then(res => console.log(res))
 }

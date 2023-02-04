@@ -13,7 +13,7 @@ const ProductHandler = async (req, res) => {
       try {
         const res = await Products.findByIdAndDelete(id);
         console.log(res);
-        return res.status(201).json({
+        return res.status(200).json({
           success: true,
           message: 'Product deleted!',
         });
