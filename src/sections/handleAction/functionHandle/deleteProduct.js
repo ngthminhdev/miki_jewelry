@@ -1,6 +1,6 @@
-import axios from 'axios';
+import axiosAuth from 'src/utils/axios';
 function deleteProduct(idProduct) {
-    const reqDelete = axios({
+    axiosAuth({
         method: 'DELETE',
         url: `/api/products/${idProduct}`
     })

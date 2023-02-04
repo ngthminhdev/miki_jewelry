@@ -10,6 +10,7 @@ import { useRecoilValue } from 'recoil';
 import { useRouter } from 'next/router';
 import axios from 'axios';
 import convertToBase64 from './functionHandle/convertImg';
+import axiosAuth from 'src/utils/axios';
 export default function createProduct() {
   const router = useRouter();
   const { id } = router.query;
@@ -96,7 +97,7 @@ export default function createProduct() {
       setErrAdd('');
     }
     if (data) {
-      const dataAdd = axios({
+      const dataAdd = axiosAuth({
         method: 'PATCH',
         url: `/api/products/update/${id}`,
         data: {
